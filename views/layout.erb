@@ -10,7 +10,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico"> 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -21,6 +23,7 @@
     <script type="text/javascript" src="js/gmaps.js"></script>
     <script type="text/javascript" src="js/mb.bgndGallery.js"></script>
     <script type="text/javascript" src="js/mb.bgndGallery.effects.js"></script>
+    <script src="js/modernizr.custom.70736.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,34 +39,29 @@
         <div id="sidebar-wrapper">
         	<ul class="sidebar-nav" id="tabList">
         		<li class="sidebar-brand">Kenmasco Photography</li>
-        		<li class="active"><a href="#about" data-togle="tab"><h4 class="aboutTitle"><i class="fa fa-tasks"></i> Home</h4></a></li>
-        		<li><a href='#partners' data-togle="tab"><h4 class="partnersTitle"><i class="fa fa-camera"></i> Gallery</h4></a></li>
-        		<li><a href="#contact" data-togle="tab"><h4 class="contactTitle"><i class="fa fa-pencil"></i> Contact</h4></a></li>
-        		<li><a href="#clients" data-togle="tab"><h4 class="clientTitle"><i class="fa fa-user"></i> Clients</h4></a></li>
+        		<li class="active"><a href="/" data-togle="tab"><h4 class="aboutTitle"><i class="fa fa-tasks"></i> Home</h4></a></li>
+        		<li><a href='/gallery' data-togle="tab"><h4 class="partnersTitle"><i class="fa fa-camera"></i> Gallery</h4></a></li>
+        		<li><a href="/contact" data-togle="tab"><h4 class="contactTitle"><i class="fa fa-pencil"></i> Contact</h4></a></li>
+        		<li><a href="/clients" data-togle="tab"><h4 class="clientTitle"><i class="fa fa-user"></i> Clients</h4></a></li>
       		</ul>
         </div>
-      <div id="page-content-wrapper">
-      	<div class="container-fluid">
-      		<div class="row visible-xs company_logo_responsive">
-       			<div class="col-xs-4 col-xs-offset-4">
-          		<h1>Kenmasco Photography</h1>
-        		</div>
-      		</div>
-
+      	<div id="page-content-wrapper">
+      		<div class="container-fluid">
+      			<div class="row visible-xs company_logo_responsive">
+       				<div class="col-xs-4 col-xs-offset-4">
+          			<h1>Kenmasco Photography</h1>
+        			</div>
+      			</div>
         	<div class="row">
           	<div class="col-lg-12">
-            	<h1>Simple Sidebar</h1>
-              <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-              <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
               <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
             </div>
+            <div id="myTabContent" class="tab-content">
+        			<%= yield %>
+      			</div>
           </div>
         </div>
-            
-        <div id="myTabContent" class="tab-content">
-        	<%= yield %>
-      	</div>
-    </div>
+    	</div>
     </div>
     
     <script>

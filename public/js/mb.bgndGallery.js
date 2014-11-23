@@ -90,7 +90,7 @@ jQuery.fn.CSSAnimate=function(a,g,p,m,h){function r(a){return a.replace(/([A-Z])
 		defaults:{
 			containment:"body",
 			images:[],
-			shuffle:false,
+			shuffle:true,
 			controls:null,
 			effect:"fade",
 			filter: null,

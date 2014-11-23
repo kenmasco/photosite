@@ -33,6 +33,23 @@ img.img-rounded.img-responsive {
   margin-top: 55px;
 }
 
+.info-panel {
+  background-image: -webkit-linear-gradient(top, #363636 0%, #363636 100%);
+  background-image: linear-gradient(to bottom, #363636 0%, #363636 100%);
+  background-repeat: repeat-x;
+  opacity: .7;
+  color: #f6f6f6;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636', endColorstr='#363636', GradientType=0);
+}
+
+.info-panel p {
+	color: #f6f6f6;
+}
+
+.info-panel a {
+	color: #f6f6f6;
+	font-weight: bold;
+}
 
 @font-face {
   font-family: 'dinpro-light';

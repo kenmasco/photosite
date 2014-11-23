@@ -19,10 +19,10 @@ $(function() {
 	 	],
 	})
   
-  $('#tabList a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
+//  $('#tabList a').click(function (e) {
+//     e.preventDefault()
+//     $(this).tab('show')
+//   })
    
   map = new GMaps({
     div: '#map-canvas',
